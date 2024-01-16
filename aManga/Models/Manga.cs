@@ -1,5 +1,6 @@
-﻿using aManga.Data;
+﻿using aManga.Data.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace aManga.Models
 {
@@ -15,6 +16,18 @@ namespace aManga.Models
         public string  ImageURL{ get; set; }
         public MangaCatagory MangaCatagory { get; set; }
 
+        //Relationships
+        public List<Character_Manga> character_Mangas { get; set; }
+
+        //Studio
+        public int F_StudioId { get; set; }
+        [ForeignKey("F_StudioId")]
+        public Studio Studio { get; set; }
+        
+        //Authors
+        public int F_AuthorId { get; set; }
+        [ForeignKey("F_AuthorId")]
+        public Author Authors { get; set; }
 
     }
 }

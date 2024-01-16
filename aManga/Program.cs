@@ -1,7 +1,13 @@
+using aManga.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Add Db context configuration
+builder.Services.AddDbContext<AppDbContext>();
+
 
 var app = builder.Build();
 

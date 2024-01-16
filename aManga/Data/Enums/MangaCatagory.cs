@@ -1,4 +1,4 @@
-﻿namespace aManga.Data
+﻿namespace aManga.Data.Enums
 {
     // here is enum is used because it is usefull to assign the names or any string values
     public enum MangaCatagory
